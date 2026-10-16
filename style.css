@@ -1,0 +1,715 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        html,body{
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        body{
+            background: white;
+            color: black;
+            transition: 0.3s;
+            padding-top: 80px;
+          
+
+        
+        }
+        body.dark{
+            background: black;
+            color: white;
+        }
+        header{
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+            width: 100%;
+        }
+        
+        header nav {
+            background: white;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 60px;
+            width: 100%;
+            transition: 0.3s;
+            border-bottom: 3px solid blue;
+            transition: transform 0.4s ease;
+                     animation: shadowRotate 2s linear infinite;
+
+        
+    
+        }
+        /* Dark mode me header black ho jayega */
+        body.dark header nav {
+            background: black !important;
+            color: white !important;
+            border-bottom:3px solid #00ff00 ;
+                     animation: shadow 2s linear infinite;
+
+         
+        }
+
+       .logo img{
+        border-radius: 50px;
+         width: 50px;
+         height: 50px;
+         object-fit: cover;
+                   animation: shadowRotate 2s linear infinite;
+         }
+         body.dark .logo img{
+         animation: shadow 2s linear infinite;
+         }
+       
+        
+        .links ul{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        .links ul li a{
+            cursor: pointer;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
+            text-decoration: none;
+            color: #fefeff;
+        }
+         
+
+        /* Light mode me links black */
+        header nav .links ul li a{
+            color: black;
+            
+        }
+        header nav .links ul li a:hover{
+            border-bottom: 2px solid blue;
+            color: blue;
+        }
+        /* Dark mode me links white */
+        body.dark header nav .links ul li a{
+            color: white;
+        }
+        body.dark .links ul li a:hover{
+            border-bottom: 2px solid #00ff00;
+            color: #00ff00;
+        }
+        
+        #sun{ 
+            display: none;
+         }
+        .moodChan{
+           font-size: 25px;  
+           cursor: pointer; 
+           display: flex; 
+           gap: 20px;
+        }
+        #menu-icon{
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+        
+      /*home page css*/
+      .wedding-hall{
+        width: 100%;
+        height: 100vh;
+        background-image: url('images/wedd.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        overflow-x: hidden;
+    
+    
+        
+      }
+      .wedding-hall::before{
+         content: "";
+         position:absolute ; 
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.4);
+         z-index: 1;
+      }
+       
+
+      .wedding-content{
+        color: #fefeff;
+        z-index: 2;
+        position: relative;
+        text-align: center;
+        
+
+      }
+      .wedding-content h1{
+        margin-top: 10%;
+        font-size: 35px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        
+      }
+      .wedding-content p{
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 15px;
+        line-height: 1.9;
+        max-width: 550px;
+      }
+      button{
+        margin-top: 10px;
+       padding: 15px 30px;
+       background:blue;
+       border: none;
+       border-radius: 30px;
+       font-size: 19px;
+       font-weight: 600;
+       box-shadow: 0 10px 30px lime;
+      }
+      button:hover{
+        background: rgb(4, 4, 204);
+      }
+      body.dark button{
+        background: #00ff00;
+        box-shadow: 0 10px 30px blue;
+
+
+      }
+      body.dark button:hover{
+        background: #10d303;
+      }
+      button a{
+        text-decoration: none;
+        color: white;
+      }
+      /*animation*/
+      #animeH1 {
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: all 2s ease-out;
+      }
+      #animeP{
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 2s ease-out;
+      }
+      #animeBtn{
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 2s ease-out;
+      }
+
+      /*about page*/
+
+        .aboutSection{
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 100px 8%;
+            overflow-x: hidden;
+        }
+        .about-vdo{
+            flex: 1;
+        }
+        
+        .about-vdo video{
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 20px;
+                     animation: shadowRotate 2s linear infinite;
+
+        }
+         body.dark .about-vdo video{
+         animation: shadow 2s linear infinite;
+         }
+        .about-desc{
+            flex: 1.2;
+        }
+        .about-desc h1{
+            font-size: 40px;
+            
+            
+        }
+        .about-desc h4{
+            font-size: 18px;
+            color: blue;
+            margin: 10px 0;
+            letter-spacing: 1px;
+            
+            
+        }
+         body.dark .about-desc h4{
+            color: #00ff00;
+         }
+        .about-desc p{
+            font-size: 15px;
+            line-height: 1.8;
+            margin-top: 15px;
+            text-align: justify;
+            
+            
+        }
+         body.dark .about-desc span {
+         color: #00ff00;
+        }
+
+        .about-desc span{
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: blue;
+            
+            
+        }
+        
+        .about-desc h3{
+            margin-top: 20px;
+
+        }
+        .about-features{
+            margin-bottom: 40px;
+            margin-top: 10px;
+        }
+        body.dark .about-desc a{
+            background: lime;
+            box-shadow: 0 10px 30px blue;
+
+        }
+        .about-desc a{
+            text-decoration: none;
+             margin-top: 10px;
+              padding: 15px 30px;
+              background:blue;
+              border: none;
+               border-radius: 30px;
+              font-size: 19px;
+              font-weight: 600;
+              color: white;
+              box-shadow: 0 10px 30px lime;
+        }
+        /* animation for about section*/
+        #aboutH1,#aboutH3{
+            opacity: 0;
+            transform: translateX(100px);
+            transition: 3s ease;
+        }
+        #aboutP,#aboutF{
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: 3s ease;
+        }
+      .about-btn:hover{
+        background: rgb(4, 4, 204);
+      }
+      body.dark .about-btn{
+        background: #00ff00;
+      }
+      body.dark .about-btn:hover{
+        background: #10d303;
+      }
+      .aboutHalls{
+        width: 100%;
+        padding: 60px 15px;
+        overflow-x: hidden;
+      }
+    .hallContainer{
+        margin: 0 auto;
+        max-width: 1100px;
+        text-align: center;
+
+        
+    }
+    body.dark .hallContainer span {
+        color: #00ff00;
+    }
+
+    .hallContainer span{
+        color:blue;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 2px;
+        
+    }
+    
+    .hallContainer h1{
+        font-size: 34px;
+        margin: 10px 0;
+    }
+     body.dark .hallPara {
+        color: #00ff00;
+     }
+
+    .hallPara{
+        max-width: 600px;
+        margin:  0 auto 40px auto;
+        line-height: 1.6;
+        color: blue;
+        font-weight: 600;
+    }
+    
+    .hallsBox{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+    body.dark .hallsDev{
+      background: rgb(63, 63, 63);
+     animation: shadow 2s linear infinite;
+
+    }
+    .hallsDev{
+        display:flex;
+        border-radius: 20px;
+        animation: shadowRotate 2s linear infinite;
+        overflow: hidden;
+        text-align: left;
+        transition: 0.3s ease;
+        
+    }
+   
+    .hallsDev img{
+        width: 50%;
+        height: 380px;
+        object-fit: cover;
+        
+    }
+    .hallText{
+        width: 50%;
+        padding: 30px;
+    }
+    .hallText h1{
+        font-size: 24px;
+    }
+    .hallText h3{
+        font-size: 15px;
+        color: blue;
+    }   
+     body.dark .hallText h3 {
+        color: #00ff00;
+     }
+
+
+   
+    .hallText p{
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+        }
+    body.dark .hallText a {
+        background: #00ff00;
+         box-shadow: 0 10px 30px blue;
+
+    }
+
+   .hallText a{
+             text-decoration: none;
+              padding: 15px 30px;
+              background:blue;
+              border: none;
+               border-radius: 30px;
+              font-size: 15px;
+              font-weight: 600;
+              color: white;
+              box-shadow: 0 10px 30px lime;
+        }
+        /*animation for hall*/
+        #hallpara{
+            opacity: 0;
+            transform: translateX(100px);
+            transition: 3s ease;
+        }
+        #hallV,
+        #hallh1{
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: 3s ease;
+        }
+        .hallsDev{
+            opacity: 0;
+            transform: translateY(50px);
+            transition: 3s ease;
+        }
+        /*service Section css*/
+        .serviceSec{
+            padding: 100px 5%;
+            gap: 50px;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        .serviceSec .serviceHead {
+         top: 20px ;
+         bottom:20px ;
+         line-height: 1.8;
+        }
+         body.dark .serviceHead p{
+            color: #00ff00;
+         }
+        .serviceHead p{
+            color: blue;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(70px);
+            transition:  all 3s ease;
+            
+        }
+        .grid-box{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(250px,1fr));
+            gap: 50px;
+            max-width: 1250px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+       
+        
+        
+        body.dark .servce-box {
+            box-shadow: 0px 20px 30px  #00ff00;
+            background: rgb(63, 63, 63);
+            transition:0.3s ease;
+        }
+
+        .servce-box{
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px blue;
+            transition: all  0.7s ease;
+            opacity: 0;
+            transform: translateX(70px) ;
+            animation: shadowRotate 2s linear infinite; /* here i added name for rotation*/
+            
+            
+        }
+        /*key frame for rotation*/
+        @keyframes shadowRotate{
+            0%{
+                box-shadow: 0 -8px 20px blue ;
+            }
+             25%{
+                box-shadow: 8px 0 20px blue ;
+            }
+             50%{
+                box-shadow: 0 8px 20px blue ;
+            }
+             75%{
+                box-shadow:  -8px 0 20px blue ;
+            }
+             100%{
+                box-shadow: 0 -8px 20px blue ;
+            }
+        }
+
+        body.dark .servce-box{
+         animation: shadow 2s linear infinite;
+        }
+         @keyframes shadow{
+            0%{
+                box-shadow: 0 -8px 20px #00ff00;
+            }
+             25%{
+                box-shadow: 8px 0 20px #00ff00;
+            }
+             50%{
+                box-shadow: 0 8px 20px #00ff00;
+            }
+             75%{
+                box-shadow:  -8px 0 20px #00ff00;
+            }
+             100%{
+                box-shadow: 0 -8px 20px #00ff00;
+            }
+        }
+
+        .servce-box img{
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            transition: 2s ease;
+        }
+            .servce-box img:hover{
+                transform: scale(1.1);
+            }
+        
+        .box-Content{
+            padding: 20px;
+            
+        }
+        .box-Content h3{
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+        body.dark .box-Content p{
+        color: #00ff00 ;
+       }
+
+        .box-Content p{
+            color: blue ;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .box-Content ul{
+            padding-left: 18px;
+            font-size: 14px;
+        }
+        .box-Content ul li{
+            margin-bottom: 6px;
+        }
+       body.dark .box-Content span {
+        color: #00ff00;
+       }
+       
+        .box-Content span{
+            display: inline-block;
+            font-weight: 700;
+            color: blue;
+            margin-top: 10px;
+            font-size: 13px;
+        }
+
+
+        
+      
+      
+     
+
+
+      /*responsive desighn*/
+      
+        @media ( max-width:900px ){
+            header nav{ padding: 10px 40px; }
+        }
+          @media ( max-width:850px ){
+            .aboutSection{
+                flex-direction: column;
+            }
+            .about-vdo video{
+                height: 280px;
+            }
+          }
+
+
+        @media ( max-width:768px ){
+            .links{
+                display: none;
+                position: absolute;
+                top: 100%; /* 40px se gap aa raha tha */
+                left: 0;
+                width: 100%;
+                background: white; /* FIX 1: background add kiya */
+                padding: 20px 0;
+                border: none;
+               box-shadow: 0 4px 10px blue;
+            }
+
+            /* Dark mode me mobile menu black */
+            body.dark .links{
+                background: black;
+                box-shadow: 0 4px 10px lime;
+            
+            
+            }
+
+            .links.active{ display: block; }
+            
+            .links ul{
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            /* FIX 2: li ka color white hata diya, ab black/white theme se ayega */
+            #menu-icon{ display: block; }
+
+            /*responsive home*/
+            .wedding-hall{
+                height: 90vh;
+                
+                
+            }
+            .wedding-content h1{
+                font-size: 28px;
+
+            }
+            .wedding-content p{
+                font-size: 15px;
+            }
+            .about-desc{
+                text-align: center;
+            }
+            .hallsDev{
+                flex-direction: column;
+            }
+            .hallsDev img, .hallText{
+                width: 100%;
+                text-align: center;
+                
+            }
+            .hallsDev img{
+                height: 220px;
+            }
+
+             .grid-box{
+            grid-template-columns: repeat(2, minmax(250px,1fr));
+          
+             }
+            
+           
+        }
+        @media (max-width:480px) {
+            .wedding-hall{
+                height:90vh ;
+                padding: 0 15px;
+            }
+            .wedding-content{
+                
+                padding: 0 10px;
+                
+            }
+            .wedding-content h1{
+                font-size: 24px;
+                
+                
+            }
+            .wedding-content p{
+                font-size: 13px;
+                line-height: 1.4;
+                margin-top: 12px;
+            }
+            .wedding-content button{
+                padding: 11px 26px;
+                margin-top: 18px;
+            }
+            .about-desc{
+                padding: 20px;
+            }
+            .about-desc h1{
+                font-size: 28px;
+                margin-bottom: 40px;
+            }
+            .about-desc p{
+                font-size: 14px;
+                font-weight: 400;
+            }
+             .grid-box{
+            display: grid;
+            grid-template-columns: repeat(1, minmax(250px,1fr));
+        
+        }
+           
+           
+        }
+    

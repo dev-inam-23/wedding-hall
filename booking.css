@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+}
+/* Dark Mode */
+body.dark{
+  background: #121212 !important;
+  color: #fff !important;
+}
+body.dark .booking-card{
+  background: #1e1e1e !important;
+  color: #fff !important;
+}
+body.dark input, body.dark select{
+  background: #333;
+  color: #fff;
+  border-color: lime;
+}
+
+html,body{
+  overflow-x: hidden;
+  width: 100%;
+  
+}
+.booking-page{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    
+}
+.booking-card{
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 550px;
+    border-radius: 20px;
+    padding: 35px 30px;
+    
+    
+}
+body.dark .booking-card{
+      box-shadow: 0 15px 40px lime;
+
+}
+.booking-card h1{
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+.booking-card h1 span{
+  color:blue;
+}
+body.dark .booking-card h1 span{
+  color: lime;
+  
+}
+.subtitle{
+  text-align: center;
+  color:blue;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+body.dark .subtitle{
+  color: lime;
+  
+}
+.booking-card label{
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+    
+}
+.booking-card input,
+.booking-card select{
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+
+.booking-card input:focus,
+    .booking-card select:focus{
+  border-color:blue;
+}
+
+
+.booking-row{
+    display: flex;
+    gap: 15px;
+}
+.booking-row div{
+    flex: 1;
+}
+
+body.dark .submit-btn{
+  background: #10e210;
+  
+}
+body.dark .submit-btn:hover{
+  background: #19f519;
+}
+.submit-btn{
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background:blue;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover{
+  background: blue;}
+
+
+.back-link{
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  
+}
+body.dark .back-link{
+  color: #00ff00;
+  
+}
+body.dark .back-link:hover{
+  color: #00ff00;
+  text-decoration: underline;
+  
+}
+
+.back-link:hover,
+.back-link:focus{
+  color: blue;
+  text-decoration: underline;
+}
+/*calender icon set up*/
+body.dark input[type="date"]::-webkit-calendar-picker-indicator{
+  filter: invert(1) !important;
+  
+  cursor: pointer;
+  
+}
+
+
+
+
+
+@media(max-width: 600px){
+  .booking-row{
+    flex-direction: column;
+    gap: 0;
+  }
+  .booking-card{
+    padding: 25px 20px;
+  }
+}

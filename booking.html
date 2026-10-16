@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking-Hall</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="booking-page">
+  
+        <div class="booking-card">
+      
+            <!--heading-->
+            <h1>Book Your <span id="Hall-Name">Hall</span> </h1>
+            <p class="subtitle">Fill The Form To Confirm Your Booking</p>
+             <!--form submition-->
+            <form action="">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter Your Name">
+
+                <label for="name">Phone/WhatsApp:</label>
+                <input type="tel" id="phone" placeholder="03XX-XXXXXXX">
+                <div class="booking-row">
+                <div>
+                 <label>Event Date:</label>
+                 <input type="date" id="date">
+                </div>
+                <div>
+                   <label>Guests:</label>
+                        <select id="guests">
+                         <option value="">Select</option>
+                         <option>100-200</option>
+                         <option>200-400</option>
+                         <option>400-500+</option>
+                         <option>500+ Guests</option>
+                 </select>
+               </div>
+                </div>
+                    
+                <label>Event Type:</label>
+                      <select id="event" required>
+                        <option value="">Select Event</option>
+                        <option>Barat</option>
+                        <option>Walima</option>
+                        <option>Mehndi</option>
+                        <option>Engagement</option>
+                        <option>Other</option>
+                      </select>
+
+                      <label>Hall Selected</label>
+                        <select id="hallType">
+                          <option value="gents">Hall For Gents</option>
+                          <option value="ladies">Hall For Ladies</option>
+                          <option value="both">Both Halls (Gents + Ladies)</option>
+                        </select>
+                         <button type="submit" class="submit-btn">Confirm Booking on WhatsApp</button>
+             </form>
+                  <a href="index.html" class="back-link">← Back to Home</a>
+
+        </div>
+    </div>
+    <script src="wedding.js"></script>
+</body>
+</html>
