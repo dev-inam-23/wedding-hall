@@ -196,19 +196,19 @@
       }
       /*animation*/
       #animeH1 {
-        opacity: 1 !important;
-        transform: translateY(-100px);
-        transition: all 2s ease-out;
+        opacity: 0 ;
+        transform: translateY(-30px);
+        transition: all 0.4s ease-out;
       }
       #animeP{
-        opacity: 1 !important;
-        transform: translateY(100px);
-        transition: all 2s ease-out;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.4s ease-out;
       }
       #animeBtn{
-        opacity: 1 !important;
-        transform: translateX(100px);
-        transition: all 2s ease-out;
+        opacity: 0 ;
+        transform: translateX(20px);
+        transition: all 0.4s ease-out;
       }
 
       /*about page*/
