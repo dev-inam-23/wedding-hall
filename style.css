@@ -197,17 +197,17 @@
       /*animation*/
       #animeH1 {
         opacity: 0 ;
-        transform: translateY(-30px);
+        transform: translateY(-90px);
         transition: all 0.4s ease-out;
       }
       #animeP{
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(90px);
         transition: all 0.4s ease-out;
       }
       #animeBtn{
         opacity: 0 ;
-        transform: translateX(20px);
+        transform: translateX(90px);
         transition: all 0.4s ease-out;
       }
 
