@@ -120,7 +120,7 @@
       .wedding-hall{
         width: 100%;
         height: 90vh;
-        background-image: url('images/wedd.jpg');
+        background-image: url('images/wedding.webp');
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -198,17 +198,17 @@
       #animeH1 {
         opacity: 0 ;
         transform: translateY(-90px);
-        transition: all 1s ease-out;
+        transition: all 2s ease-out;
       }
       #animeP{
         opacity: 0;
         transform: translateY(90px);
-        transition: all 1s ease-out;
+        transition: all 2s ease-out;
       }
       #animeBtn{
         opacity: 0 ;
         transform: translateX(90px);
-        transition: all 1s ease-out;
+        transition: all 2s ease-out;
       }
 
       /*about page*/
