@@ -7,11 +7,11 @@
             links.classList.toggle("active")
         }
         }
-         // after click link disappear navbar
+         // after click link  navbar will disappear
         const allLinks = document.querySelectorAll(".links a");
         allLinks.forEach( link=>{
         link.addEventListener("click",(e)=>{
-            //for smooth scroll + stop jump
+            // smooth scrolling + stop jumping
             e.preventDefault();
           const targetId = link.getAttribute("href");
           if (targetId && targetId.startsWith("#")&& targetId.length > 1) {
@@ -34,7 +34,7 @@
          if(localStorage.getItem("themes") ==="dark"){
              document.body.classList.add("dark");
             if(moon) moon.style.display = "none";
-            if(sun) sun.style.display = "block"
+            if(sun) sun.style.display = "block";
          }
         if(moon) moon.addEventListener('click',()=>{
             document.body.classList.add("dark");
@@ -69,28 +69,40 @@
             },400)
         });
     
-        let lastScroll = 0;
+       
         
         const nav = document.querySelector("header nav");
-        // for about page
+        //  about page
          const aboutH1 = document.getElementById("aboutH1");
             const aboutH3 = document.getElementById("aboutH3");
             const vdo = document.querySelector('.about-vdo video');
-            const aboutSection = document.querySelector(".aboutSection")
-            const aboutP = document.querySelector('#aboutP')
-            const aboutF = document.querySelector('#aboutF')
-            // for hall page animation
-            const aboutHalls = document.querySelector(".aboutHalls")
+            const aboutSection = document.querySelector(".aboutSection");
+            const aboutP = document.querySelector('#aboutP');
+            const aboutF = document.querySelector('#aboutF');
+            //  hall page animation
+            const aboutHalls = document.querySelector(".aboutHalls");
             const hallpara = document.getElementById("hallpara");
-            const hallh1 = document.getElementById("hallh1")
-            const hallsp1 = document.getElementById("hallV")
-            const hallDev = document.querySelectorAll(".hallsDev")
-            //for sersec pagee animation
-            const services = document.getElementById("services")
+            const hallh1 = document.getElementById("hallh1");
+            const hallsp1 = document.getElementById("hallV");
+            const hallDev = document.querySelectorAll(".hallsDev");
+            // services page animation
+            const services = document.getElementById("services");
             const serviceP = document.querySelector(".serviceHead p");
+            // gallery page animation
+            const gallery = document.querySelector(".gallerySection");
+            const galleryP = document.querySelector(".gallery-head p")
+            // lighbox image
+            const images = document.querySelectorAll(".gallery div img");
+            const lightBox = document.getElementById('lightbox');
+            const lightBoxImg = document.getElementById('lightboxImg');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const closeBtn = document.getElementById('closeBtn');
+            
 
 
-             
+
+              let lastScroll = 0;
         
         window.addEventListener('scroll',()=>{
             let currentScroll = window.scrollY;
@@ -112,6 +124,7 @@
                             element.style.transform = 'translateX(0)';
                         }
                     });
+                    // video animation
                     if (vdo) vdo.play();
                 } else if (vdo) {
                     vdo.pause();
@@ -135,7 +148,7 @@
                             box.style.opacity='1';
                             box.style.transform = 'translateY(0)'
                         }
-                    });
+                  });
               }
             }
 
@@ -158,9 +171,63 @@
                     })
                 }
             }
+            
+             if (gallery){
+                const galleryTop = gallery.getBoundingClientRect().top;
+                if (galleryTop < 400) {
+                    if (galleryP) {
+                        galleryP.style.opacity='1'
+                        galleryP.style.transform='translateX(0)'
+                    }
+                    
+                }
+               
+            }
+        });
+         let currentIndex = 0;
+            images.forEach((img,idx)=>{
+                img.addEventListener('click',()=>{
+                currentIndex = idx ;
+                 
+                 showImage();
+                });
+            });
 
-             
-        })
+            function showImage(){
+              lightBoxImg.src = images[currentIndex].src;
+              lightBox.classList.add('active');
+            }
+
+            function closeLightbox() {
+                lightBox.classList.remove('active');
+            }
+
+            closeBtn.addEventListener('click',closeLightbox);
+             nextBtn.addEventListener('click',()=>{
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage();
+             });
+
+            prevBtn.addEventListener('click',()=>{
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage();
+             });
+
+            lightBoxImg.addEventListener('click',closeLightbox);
+
+            lightBox.addEventListener('click',(e)=>{
+                if (e.target === lightBox){ closeLightbox();
+                }  
+            })
+        
+           
+        
+
+        
+
+        
+       
+
     
              // arrow back dissable
                 history.pushState(null, null, location.href);
