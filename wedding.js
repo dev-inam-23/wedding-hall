@@ -91,6 +91,10 @@
             // gallery page animation
             const gallery = document.querySelector(".gallerySection");
             const galleryP = document.querySelector(".gallery-head p")
+              const leftpic = document.querySelectorAll(".Animepic");
+              const rightpic = document.querySelectorAll(".Animepics");
+
+           
             // lighbox image
             const images = document.querySelectorAll(".gallery div img");
             const lightBox = document.getElementById('lightbox');
@@ -159,7 +163,10 @@
                     if (serviceP) {
                         serviceP.style.opacity='1';
                         serviceP.style.transform='translateY(0)'
+                        
+                       
                     }
+                    
                     // targeted all service boxes
                     const serviceBoxes = document.querySelectorAll(".servce-box");
 
@@ -178,7 +185,25 @@
                     if (galleryP) {
                         galleryP.style.opacity='1'
                         galleryP.style.transform='translateX(0)'
+
                     }
+                  
+
+                    leftpic.forEach((box,i)=>{
+                        setTimeout(() => {
+                          box.style.opacity='1';
+                          box.style.transform='translateX(0)'  
+                        },i* 200);
+                    
+                    })
+
+                    rightpic.forEach((box,i)=>{
+                        setTimeout(() => {
+                          box.style.opacity='1';
+                          box.style.transform='translateX(0)'  
+                        },i* 200);
+                    
+                    })
                     
                 }
                

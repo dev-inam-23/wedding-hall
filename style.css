@@ -34,10 +34,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 60px;
+            padding: 10px 60px;
             width: 100%;
             transition: 0.3s;
-            border-bottom: 3px solid blue;
             transition: transform 0.4s ease;
             animation: shadowRotate 2s linear infinite;
 
@@ -48,7 +47,6 @@
         body.dark header nav {
             background: black !important;
             color: white !important;
-            border-bottom:3px solid #00ff00 ;
             animation: shadow 2s linear infinite;
 
          
@@ -72,12 +70,11 @@
             display: flex;
             gap: 30px;
             list-style: none;
+            
         }
         .links ul li a{
             cursor: pointer;
             font-weight: 600;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 2px;
             text-decoration: none;
             color: #fefeff;
         }
@@ -105,7 +102,7 @@
             display: none;
          }
         .moodChan{
-           font-size: 25px;  
+           font-size: 23px;  
            cursor: pointer; 
            display: flex; 
            gap: 20px;
@@ -636,6 +633,16 @@
           background-position: center;
                                                         
         }
+        .Animepic{
+            opacity: 0;
+            transform: translateX(-70px);
+            transition: all 1.5s ease;
+        }
+         .Animepics{
+            opacity: 0;
+            transform: translateX(70px);
+            transition: all 1s ease;
+        }
             
        
 
@@ -644,7 +651,8 @@
         #lightbox{
             display: none;
             position: fixed;
-            top: 0; left: 0;
+            top: 0; 
+            left: 0;
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.4);
@@ -680,6 +688,8 @@
             background: none;
             box-shadow: none;
             cursor: pointer;
+            user-select: none;
+            z-index: 10;
            
         }
         #prevBtn{
@@ -791,6 +801,24 @@
                 grid-template-columns: repeat(2,1fr);
                 
               }
+              #lightbox img{
+                width: 100%;
+                
+              }
+              #prevBtn,#nextBtn{
+                position: absolute;
+                top: 50%;             
+                font-size: 20px;
+              }
+                #prevBtn{
+                    top: auto;
+                    left: 60px;
+            
+             }
+                 #nextBtn{
+                    top: auto ;
+                  right: 60px ;
+        }
         }
             
            
@@ -921,6 +949,15 @@
                display: grid;
                 grid-template-columns: repeat(1, 1fr);
               }
+               #prevBtn{
+                    top: auto;
+                    left: 30px;
+            
+             }
+                 #nextBtn{
+                    top: auto ;
+                  right: 30px ;
+        }
            
            
         }
