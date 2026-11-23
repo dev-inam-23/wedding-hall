@@ -7,7 +7,7 @@
         }
         html,body{
             overflow-x: hidden;
-            width: 100%;
+            max-width: 100%;
         }
         
         body{
@@ -100,11 +100,20 @@
         
         #sun{ 
             display: none;
+            font-size: 28px;
+            
+         }
+         #moon{
+            display: block;
+            font-size: 28px;
+            rotate: -30deg;
+            
          }
         .moodChan{
            font-size: 23px;  
            cursor: pointer; 
            display: flex; 
+           
            gap: 20px;
         }
         #menu-icon{
@@ -113,11 +122,11 @@
             cursor: pointer;
         }
         
-      /*home page css*/
+                                               /*home page css*/
       .wedding-hall{
         width: 100%;
         height: 100vh;
-        background-image: url('images/wedding.webp');
+        background-image: url('images/wedding.webp') ; 
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -138,7 +147,7 @@
          left: 0;
          width: 100%;
          height: 100%;
-         background: rgba(0, 0, 0, 0.4);
+         background: rgba(0, 0, 0, 0.5);
          z-index: 1;
       }
        
@@ -175,14 +184,14 @@
        border-radius: 30px;
        font-size: 19px;
        font-weight: 600;
-       box-shadow: 0 10px 30px lime;
+       
       }
       button:hover{
         background: rgb(4, 4, 204);
       }
       body.dark button{
         background: #00ff00;
-        box-shadow: 0 10px 30px blue;
+        
 
 
       }
@@ -284,7 +293,7 @@
         }
         body.dark .about-desc a{
             background: lime;
-            box-shadow: 0 10px 30px blue;
+
 
         }
         .about-desc a{
@@ -297,7 +306,7 @@
               font-size: 19px;
               font-weight: 600;
               color: white;
-              box-shadow: 0 10px 30px lime;
+              
         }
         /* animation for about section*/
         #aboutH1,#aboutH3{
@@ -417,7 +426,7 @@
         }
     body.dark .hallText a {
         background: #00ff00;
-         box-shadow: 0 10px 30px blue;
+         
 
     }
 
@@ -430,7 +439,7 @@
               font-size: 15px;
               font-weight: 600;
               color: white;
-              box-shadow: 0 10px 30px lime;
+              
         }
         /*animation for hall*/
         #hallpara{
@@ -700,11 +709,250 @@
             right: 30px;
         }
 
-
-
+                                                 /*contact us section*/
+        .ContactSection{
+            margin-top: 50px;
+            justify-content: center;
+            padding: 30px 8%;
+            margin: 0 auto;
+        }
+        .ContactHeader{
+            text-align: center;
+            padding: 20px ;
+            
+        }
+        .ContactHeader h1{
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;   
+        }
+        body.dark .ContactHeader p{
+            color: #00ff00;
+        }
+        .ContactHeader p{
+            font-weight: 600;
+            font-size: 18px;
+            color: blue;
+            margin-bottom: 20px;
+        }
+        .Contact-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px ;
+            max-width: 1200px;
+            margin: 0 auto;
+           
+            
+            
+        }
         
+        .ContactInfo,.ContactForm{
+            padding: 20px;
+            
+            
+            
+            
+        } 
+        .ContactForm{
+            padding-bottom: 50px;
+        }
+        body.dark .ContactForm h2{
+            color: #00ff00 !important;
+        }
+        body.dark .ContactInfo h2{
+            color: lime !important;
+        }
+        .ContactInfo h2,.ContactForm h2{
+             margin-bottom: 20px;
+             color: blue !important;
+             font-size: 24px;
+             margin-left: 20px;  
+             text-align: center;
+        }body.dark .info-group{
+                  animation: shadow 2s linear infinite !important;
+           
+        }
+         body.dark .form-group{
+                  animation: shadow 2s linear infinite !important;
 
 
+        }
+        .info-group,.form-group{
+            max-width: 600px;
+             animation: shadowRotate 2s linear infinite; /* here i added name for rotation*/
+            margin-bottom: 15px;
+            border-radius: 12px;
+            padding: 10px 20px;
+            height: 90px;
+            
+        }
+
+        .info-group{
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 15px;
+            
+        }
+        body.dark .icon{
+            background: #00ff00;
+        }
+        .icon{
+            background:  rgb(34, 34, 243);
+            width: 50px;
+            height: 50px;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            flex-shrink: 0;
+            
+        }
+        .info-group h4{
+            font-size: 18px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        .info-group p{
+         font-size: 16px;
+         font-weight: 540;
+        }
+        body.dark .info-group p:hover{
+            color: #00ff00;
+        }
+        .info-group p:hover{
+            color:  rgb(34, 34, 243);
+            text-decoration: underline;
+        }
+        .form-group{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+        body.dark .form-group label{
+            color:lime;
+        }
+        .form-group label{
+            font-weight: 600;
+            padding-bottom: 5px;
+            color: rgb(34, 34, 243);
+        }
+        body.dark .form-group input,
+        .form-group textarea{
+            background: #1e1f1e !important;
+        }
+        .form-group input,
+        .form-group textarea{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            box-sizing: border-box;
+            background:none!important;
+        }
+         
+        .form-group input:focus,
+        .form-group textarea:focus{
+            border:1px solid #1725e9;
+            outline: none;
+        }
+        .form-group textarea{
+            height: 80px;
+        }
+        body.dark .ContactForm a{
+            background: #00ff00;
+        }
+        .ContactForm a{
+            display: inline-block;
+            background: rgb(34, 34, 243);
+            color:white;
+            padding: 15px 35px;
+            text-decoration: none;
+            width: auto;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-left: 40%;
+            margin-top: 15px;
+            
+        }
+       
+        .wed-footer{
+            margin-top: 80px;
+            padding-top: 60px;
+            
+            
+        }
+      
+        .footer-Container{
+            
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 60px;
+            padding: 20px;
+            padding-bottom: 40px;
+            border-radius: 20px;
+        
+         margin-bottom: 10px;
+        }
+        .footerBox h3{
+            padding-bottom: 15px;
+        }
+        .footerBox p{
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+           max-width: 600px;
+        
+        }
+        body.dark .footerBox a{
+            color: #fefeff;
+            
+        }
+        .footerBox a{
+            text-decoration: none;
+            color:black;
+        }
+        .footerBox ul li{
+            list-style: none;
+            font-size: 14px;
+            padding-bottom: 9px;
+        }
+        .footerBox ul li a:hover{
+            font-size: 15px;
+            transition: 0.3s ease;
+        }
+        body.dark .socialLinks a{
+            background: #00ff00;
+        }
+        .socialLinks a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #1725e9;
+            padding: 8px 12px;
+            margin-right: 8px;
+            margin-top: 12px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        body.dark .footerBottom{
+            border-top: 1px solid lime;
+        }
+        .footerBottom{
+            border-top: 1px solid blue;
+            padding: 10px 0;
+            font-size: 13px;
+            text-align: center;
+        }
+        
                                                                   /*responsive desighn*/
       
         @media ( max-width:1024px ){
@@ -817,10 +1065,56 @@
              }
                  #nextBtn{
                     top: auto ;
-                  right: 60px ;
+                    right: 60px ;
         }
+        .ContactHeader{
+            margin-top: -40px;
+            margin-bottom: -30px;
         }
+        .ContactHeader h1{
+            font-size: 28px;
+        }
+        
+        .Contact-container{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+           text-align: center;
+           
+        
+        }
+        .form-group{
+            text-align: left;
+        }
+        .ContactInfo,.ContactForm{
+           margin-bottom: -40px;
+        }
+
+        .ContactInfo h2,.ContactForm h2{
+             margin-bottom: 17px;
+             color: blue;
+             font-size: 24px;
+             
+             
+             
+             
+        }
+        .info-group h4,
+        .info-group p{
+            text-align: left;
+        }
+        .ContactForm a{
+            margin-left: -1%;
+        }
+        .footer-Container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-content: center;
+            text-align: center;
             
+
+        }    
+       
+    }  
            
         
         @media (max-width:480px) {
@@ -958,8 +1252,55 @@
                     top: auto ;
                   right: 30px ;
         }
-           
-           
+          .ContactHeader{
+            margin-top: -30px;
+            margin-bottom: -50px;
+          }
+          .ContactHeader p{
+            font-size: 14px;
+          }
+         .ContactHeader h1{
+            font-size: 21px;
+         } 
+         .Contact-container{
+            justify-content: center;
+            text-align: center;
+            
+         } 
+         .ContactInfo h2,
+         .ContactForm h2{
+            font-size: 15px !important;
+            text-align: center;
+            margin: 0 auto 30px auto;
+         }
+         .ContactHeader p{
+            font-size: 14px;
+         }
+         .info-group h4{
+            font-size: 16px;
+        }
+        .info-group p{
+            font-size: 13px;
+            
+        }
+      
+        .ContactForm a{
+            padding: 10px 25px;
+            margin-left: -2%;
+            
+        }
+        .footer-Container{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            row-gap: 30px;
+        
+            
+
+        }  
+    
+        .footerBottom p{
+            font-size: 11px;
+        }
         }
         @media (max-width:393px) {
             .wedding-hall{
