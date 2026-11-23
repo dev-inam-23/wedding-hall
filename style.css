@@ -928,14 +928,12 @@
             font-size: 15px;
             transition: 0.3s ease;
         }
-        body.dark .socialLinks a{
-            background: #00ff00;
-        }
+        
         .socialLinks a{
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background: #1725e9;
+            
             padding: 8px 12px;
             margin-right: 8px;
             margin-top: 12px;
@@ -943,6 +941,15 @@
             width: 50px;
             height: 50px;
         }
+        .socialLinks img{
+        border-radius: 50px;
+         width: 50px;
+         height: 50px;
+         object-fit: cover;
+         background-position: center;
+         
+         margin-right: 10px;
+         }
         body.dark .footerBottom{
             border-top: 1px solid lime;
         }
