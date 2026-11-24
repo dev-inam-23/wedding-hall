@@ -844,6 +844,10 @@
         .form-group textarea{
             background: #1e1f1e !important;
         }
+        body.dark .form-group input,
+        .form-group textarea{
+            color: white;
+        }
         .form-group input,
         .form-group textarea{
             width: 100%;
@@ -852,6 +856,7 @@
             border-radius: 6px;
             box-sizing: border-box;
             background:none!important;
+            
         }
          
         .form-group input:focus,
@@ -901,7 +906,7 @@
             padding: 20px;
             padding-bottom: 40px;
             border-radius: 20px;
-            background: rgb(250, 248, 248);
+            background: rgb(243, 242, 242);
         
          margin-bottom: 10px;
         }
